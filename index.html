@@ -1,47 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
-    <title>JavaScript Sandbox</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실버세대 퀴즈 이벤트</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
-    <main>
-        <h1>요즘 무슨 뜻인지 모르겠는 말들이 부쩍 늘었나요?</h1>
-        <p>느좋? 야르? 이게 다 무슨 뜻일까요?</p>
-        <button id="main_btn">알아보러 가기</button>
-    </main>
-    <h1>신조어 퀴즈: "스불재"의 의미는?</h1>
+    <div id="app">
+      <div class="start-screen" id="start-screen">
+        <h1>요즘 유행어 얼마나 알고 계신가요?</h1>
+        <p>요즘 유행어 맞추시고 요즘 유행하는 여행지 갑시다!</p>
+        <button id="start-btn">퀴즈 시작</button>
+      </div>
 
-    <form action="#" method="POST">
-        <!-- 보기 1 -->
-        <label>
-            <input type="radio" name="answer" value="1">
-            스스로 불안한 재정 상태
-        </label>
-  
-        <!-- 보기 2 -->
-        <label>
-            <input type="radio" name="answer" value="2">
-            스스로 불러온 재앙
-        </label>
-  
-        <!-- 보기 3 -->
-        <label>
-            <input type="radio" name="answer" value="3">
-            스스로 불러온 재미
-        </label>
-  
-        <!-- 보기 4 -->
-        <label>
-            <input type="radio" name="answer" value="4">
-            스쳐간 불도 재확인하자
-        </label>
-  
-        <!-- 제출 버튼 -->
-        <button type="submit">제출</button>
-    </form>
-    <script src="./index.mjs" type="module"></script>
+      <form id="quiz-form" class="quiz hidden">
+        <div id="quiz-questions"></div>
+        <button type="submit" id="submit-btn">정답 확인</button>
+      </form>
+
+      <div class="result-screen hidden" id="result-screen">
+        <p id="score-text"> 0/5 개 맞추셨어요!</p>
+        <button id="retry-btn">다시 해보기</button>
+      </div>
+
+      <div id="form-container" class="hidden"></div>
+    </div>
+
+    <script src="index.js"></script>
   </body>
 </html>

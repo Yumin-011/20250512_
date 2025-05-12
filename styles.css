@@ -1,29 +1,159 @@
-body{
-    background: #FAF4C0;
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  font-size: 20px; 
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10em;
+#app {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 500px; 
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-#main_btn{
-    background: #B2EBF4;
-    border: none;
-    font-size: 3rem;
+h1 {
+  color: #293264;
+  margin-bottom: 10px;
+  font-size: 32px; 
+  text-align: center;
 }
 
-h1{
-    font-size: 3rem;
+p {
+  color: #666;
+  text-align: center;
+  font-size: 22px; 
 }
 
-p{
-    font-size: 2.5rem;
+button {
+  background-color: #4d5b9e;
+  color: white;
+  border: none;
+  padding: 16px 32px; 
+  border-radius: 10px;
+  font-size: 20px; 
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#main_btn{
-    cursor: pointer;
-    
+button:hover {
+  background-color: #3b4a85;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question-block {
+  background-color: #f0f4fc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.question {
+  font-weight: bold;
+  color: #293264;
+  margin-bottom: 10px;
+  font-size: 22px; 
+}
+
+.answers button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin: 6px;
+  padding: 14px;
+  border-radius: 8px;
+  color: #333;
+  font-size: 18px; 
+  transition: all 0.3s;
+}
+
+.answers button.selected {
+  background-color: #d6dbf5;
+  border-color: #5b60db;
+}
+
+.answers button.correct {
+  background-color: #94d7a2;
+  border-color: #379e47;
+  color: #000;
+}
+
+.answers button.incorrect {
+  background-color: #f8bcbc;
+  border-color: #d20000;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-screen {
+  text-align: center;
+  font-size: 24px;
+  color: #293264;
+}
+
+#form-container {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f4fc;
+  font-size: 20px;
+}
+
+#form-container h2 {
+  text-align: center;
+  color: #293264;
+  font-size: 24px;
+}
+
+#form-container input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+@media (min-width: 800px) {
+  #app {
+    max-width: 600px;
+  }
+
+  button {
+    font-size: 22px;
+    padding: 18px 36px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  p, .question, .result-screen {
+    font-size: 24px;
+  }
+
+  .answers button {
+    font-size: 20px;
+    padding: 16px;
+  }
+
+  #form-container input {
+    font-size: 20px;
+  }
 }
